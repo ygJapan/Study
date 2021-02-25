@@ -49,49 +49,38 @@ public class RSPgame {
 				
 				if(computer == 1) {
 					System.out.println("相手は"+ computer + "なのであいこ");
-
-					
 				}else if(computer == 2){
 					System.out.println("相手は"+ computer + "なので勝ち");
-					myWin ++;
-					System.out.println("現在あなた:" + myWin + " " + "コンピュータ：" + computerWin);
-					
+					myWin ++;					
 				}else if(computer == 3){
 					System.out.println("相手は"+ computer + "なので負け");
 					computerWin ++;
-					System.out.println("現在あなた:" + myWin + " " + "コンピュータ：" + computerWin);
 				}
 				
-				
 			}else if(myHand == 2) {
-				
 				if(computer == 1) {
 					System.out.println("相手は"+ computer + "なので負け");
 					computerWin ++;
-					System.out.println("現在あなた:" + myWin + " " + "コンピュータ：" + computerWin);
 				}else if(computer == 2){
 					System.out.println("相手は"+ computer + "なのであいこ");
-					
 				}else if(computer == 3){
 					System.out.println("相手は"+ computer + "なので勝ち");
 					myWin ++;
-					System.out.println("現在あなた:" + myWin + " " + "コンピュータ：" + computerWin);
 				}
 					
 			}else if(myHand == 3) {
-					
 				if(computer == 1) {
 					System.out.println("相手は"+ computer + "なので勝ち");
 					myWin ++;
-					System.out.println("現在あなた:" + myWin + " " + "コンピュータ：" + computerWin);
 				}else if(computer == 2){
 					System.out.println("相手は"+ computer + "なので負け");
 					computerWin ++;
-					System.out.println("現在あなた:" + myWin + " " + "コンピュータ：" + computerWin);
 				}else if(computer == 3){
 					System.out.println("相手は"+ computer + "なのであいこ");
 				}
 			}
+			
+			System.out.println("現在あなた:" + myWin + " " + "コンピュータ：" + computerWin);
 		}
 		
 	}
