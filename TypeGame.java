@@ -14,21 +14,35 @@ public class TypeGame {
 		//1-1 5回繰り返す。
 		//1-2 タイマー機能
 		//1-3 １文字/秒　のスコア表示
+			//おまけ　Thread.sleep()を使って、タイプミスで2秒止めて見た。
 		
 		Random r = new Random();
 		Scanner s = new Scanner(System.in);
-		String oneokrock[]= {"oneokrock","taka","toru","ryota","tomoya"};
-//		boolean judge = true;
-		
-		int i = r.nextInt(5);
-		System.out.println(oneokrock[i]);
+		String oneokrock[]= {"EyeoftheStorm","StandOutFitIn","HeadHigh","GrowOldDieYoung","PushBack","WastedNights","Change","LettingGo","WorstinMe","IntheStars","Giants","TheLastTime"};
+		int cLength = 0;
+		long startTime = System.currentTimeMillis();	//タイマースタート
+		for(int i=0; i < 5; i++) {
+		int rInt = r.nextInt(11);
+		System.out.println(oneokrock[rInt]);
 		String type = s.next();
 		
-		if(type == oneokrock[i]) {	//String用の==調べる
+		if(type.equals(oneokrock[rInt])) {	//String用の比較の場合は ->文字列.equals(文字列)
 			System.out.println("あたり");
 		}else {
-			System.out.println("はずれ");
+			System.out.println(" 'はずれ' 2秒ペナルティ!!");
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+			}
 		}
+		cLength = cLength + type.length();
+		
+		}
+		long endTime = (System.currentTimeMillis());
+		System.out.println("---終了---");
+		long time = (endTime-startTime)/1000;
+		System.out.println("記録：" + time + "秒");
+		System.out.println(cLength/time + "文字/秒");
 		
 		
 	}
