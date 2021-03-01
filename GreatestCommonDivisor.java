@@ -5,34 +5,34 @@ public class GreatestCommonDivisor {
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
 		
-		System.out.println(GCDmethod(-147,-105));
+		System.out.println(gcdMethod(121,77));
 
 	}
 
 	
-	public static int GCDmethod(int X,int Y) {
-		int Z = 0;		//XとYを比較して大きい値をZに代入する。
+	public static int gcdMethod(int x,int y) {
+		int z = 0;		//XとYを比較して大きい値をZに代入する。
 		int divide = 0;	//割る数
-		int GCD = 1; 
+		int gcd = 1; 
 
-		if(X < 0) {		//負の自然数にも対応できるようにする処理。
-			X = X * -1;
+		if(x < 0) {		//負の自然数にも対応できるようにする処理。
+			x = x * -1;
 		}
-		if(Y < 0) {
-			Y = Y * -1;
+		if(y < 0) {
+			y = y * -1;
 		}
 		
-		if(X > Y) {		//XとYを比較する処理
-			Z = X;
+		if(x > y) {		//XとYを比較する処理
+			z = x;
 		}else {
-			Z = Y;
+			z = y;
 		}
 		
-			divide = Z - 1;		//大きい値から割っていく。大きい約数から先に計算していく。
+			divide = z - 1;		//大きい値から割っていく。大きい約数から先に計算していく。
 		
 		while(divide > 0) {			//0まで繰り返す。という条件
-			if(X % divide == 0   &&   Y % divide == 0) {		//X÷d と　Y÷d の余りが０の時...				
-				GCD = divide;
+			if(x % divide == 0   &&   y % divide == 0) {		//X÷d と　Y÷d の余りが０の時...				
+				gcd = divide;
 				break;
 			}else {
 				divide --;
