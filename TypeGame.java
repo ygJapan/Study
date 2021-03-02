@@ -20,13 +20,13 @@ public class TypeGame {
 		Scanner s = new Scanner(System.in);
 		String oneokrock[]= {"EyeoftheStorm","StandOutFitIn","HeadHigh","GrowOldDieYoung","PushBack","WastedNights","Change","LettingGo","WorstinMe","IntheStars","Giants","TheLastTime"};
 		int cLength = 0;
-		long startTime = System.currentTimeMillis();	//タイマースタート
+		long startTime = System.currentTimeMillis();//タイマースタート
 		for(int i=0; i < 5; i++) {
 		int rInt = r.nextInt(11);
 		System.out.println(oneokrock[rInt]);
 		String type = s.next();
 		
-		if(type.equals(oneokrock[rInt])) {	//String用の比較の場合は ->文字列.equals(文字列)
+		if(type.equals(oneokrock[rInt])) {//String用の比較の場合は ->文字列.equals(文字列)
 			System.out.println("あたり");
 		}else {
 			System.out.println(" 'はずれ' 2秒ペナルティ!!");
@@ -43,7 +43,6 @@ public class TypeGame {
 		long time = (endTime-startTime)/1000;
 		System.out.println("記録：" + time + "秒");
 		System.out.println(cLength/time + "文字/秒");
-		
 		
 	}
 

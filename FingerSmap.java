@@ -27,7 +27,7 @@ public class FingerSmap {
 			System.out.println("あなたが出す指の数は？(0~" + myTotalFinger + "を入力してください。)");
 			myFinger = s.nextInt();
 			
-			computerFinger = r.nextInt(computerTotalFinger+1);	//ランダムで相手が指を出す。
+			computerFinger = r.nextInt(computerTotalFinger+1);//ランダムで相手が指を出す。
 			System.out.println("(相手は"+ computerFinger + "本指を出した。)" + "合計：" + (myFinger + computerFinger) + "本");
 
 			
@@ -35,11 +35,11 @@ public class FingerSmap {
 				System.out.println("お見事");
 				totalFinger --;
 				myTotalFinger --;
-				if(myTotalFinger == 0) {						//試合の途中でも、自分が2回当てたらそこで終了。
+				if(myTotalFinger == 0) {//試合の途中でも、自分が2回当てたらそこで終了。
 					break;
 				}	
 			}else {
-					System.out.println("残念");
+				System.out.println("残念");
 			}
 				
 			System.out.println("あなたの残機："+ myTotalFinger +" 相手の残機：" + computerTotalFinger);
@@ -47,7 +47,7 @@ public class FingerSmap {
 			System.out.println("あなたが出す指の数は？(0~" + myTotalFinger + "を入力してください。)");
 			myFinger = s.nextInt();		
 			
-			computerFinger = r.nextInt(computerTotalFinger+1);	//ランダムで相手が指を出す。
+			computerFinger = r.nextInt(computerTotalFinger+1);//ランダムで相手が指を出す。
 			computerNumber = r.nextInt(totalFinger+1);
 			System.out.println("いっせーっせーの?" + "　『" +computerNumber + "』");
 			System.out.println("(相手は"+ computerFinger + "本指を出した。)" + "合計：" + (myFinger + computerFinger) + "本");
@@ -59,15 +59,12 @@ public class FingerSmap {
 			}else {
 				System.out.println("お見事");
 			}
-			
 		}
-			
-			System.out.println("---終了---");
-			if(myTotalFinger == 0) {
-				System.out.println("勝者:あなた！");			
-			}else {
-				System.out.println("勝者:コンピュータ!");	
-			}
+		System.out.println("---終了---");
+		if(myTotalFinger == 0) {
+			System.out.println("勝者:あなた！");			
+		}else {
+			System.out.println("勝者:コンピュータ!");	
+		}
 	}
-
 }
